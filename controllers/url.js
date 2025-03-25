@@ -2,7 +2,7 @@ const shortid=require("shortid");
 const URL=require("../models/url");
 
 async function handleGenerateNewShortId(req,res){  
-const allURLs=await URL.find({});
+const allURLs=await URL.find({createdBy:req.user._id});
 const body=req.body
 const originalURL=body.url;
 if(!body.url)
@@ -17,6 +17,7 @@ await URL.create({
 shortId:shortID,
 redirectUrl:body.url,
 visitHistory:[],
+createdBy:req.user._id
 });
 
 
