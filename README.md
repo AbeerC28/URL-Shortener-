@@ -2,7 +2,7 @@
 <br>
 Simple URL Shortener using Node.js , Express.js , MongoDB and EJS(Embedded Javascript)
 <br>
-The port used is 8001 and below are the services
+The localhost port used is 8001 and below are the services
 <br>
 Different Routes:-
 <br>
